@@ -22,4 +22,14 @@ def calc(first_int, second_int, operation):
         case _:
             print("Invalid input!")
 
+
 calc(first_int, second_int, operation)
+
+
+def even_list():
+    array = list(map(int, input("Input your array(divided by spaces)\n").split()))
+    even_array = [x for x in array if x % 2 == 0]
+    return even_array
+
+
+print(even_list())
