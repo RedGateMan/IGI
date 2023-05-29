@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b03f7fd4-c385-4574-8cd9-c613749b644e" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/task1/.dockerignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/task1/Dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/task1/code/calculations.py" afterDir="false" />
@@ -27,6 +28,13 @@
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/text" beforeDir="false" afterPath="$PROJECT_DIR$/text" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+>>>>>>> 487afaa (First commit)
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +56,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -160,6 +169,19 @@
       </list>
     </recent_temporary>
   </component>
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+>>>>>>> 487afaa (First commit)
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -170,15 +192,19 @@
       <updated>1682326828836</updated>
       <workItem from="1682326832906" duration="9884000" />
       <workItem from="1683910537442" duration="3000" />
+<<<<<<< HEAD
       <workItem from="1684244499041" duration="4398000" />
       <workItem from="1684260214594" duration="3806000" />
       <workItem from="1684865509350" duration="8578000" />
+=======
+>>>>>>> 487afaa (First commit)
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< HEAD
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -195,5 +221,9 @@
     <SUITE FILE_PATH="coverage/Lab_2$helper_functions.coverage" NAME="helper_functions Coverage Results" MODIFIED="1684869346239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task1/code" />
     <SUITE FILE_PATH="coverage/Lab_2$main.coverage" NAME="main Coverage Results" MODIFIED="1684868229735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task2/src" />
     <SUITE FILE_PATH="coverage/Lab_2$constants.coverage" NAME="constants Coverage Results" MODIFIED="1684247969002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+=======
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lab_2$main.coverage" NAME="main Coverage Results" MODIFIED="1682337444083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> 487afaa (First commit)
   </component>
 </project>
