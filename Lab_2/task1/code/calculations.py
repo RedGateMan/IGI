@@ -43,7 +43,7 @@ def get_average_length_of_sentence(text):
 def get_average_length_of_word(text):
     words = get_words(text)
     num_of_words = len(words)
-    if (num_of_words == 0):
+    if num_of_words == 0:
         return 0
     total_length = 0
     for word in words:

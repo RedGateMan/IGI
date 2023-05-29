@@ -5,28 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b03f7fd4-c385-4574-8cd9-c613749b644e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/task1/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task1/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task1/code/calculations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task1/code/constants.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task1/code/helper_functions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task1/code/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task1/code/tests/test_calculations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task1/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/src/comand_args_validator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/src/command_parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/src/commands_executor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/src/constants.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/src/file_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/src/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/src/storage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/text" beforeDir="false" afterPath="$PROJECT_DIR$/text" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/code/calculations.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1/code/calculations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1/code/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +33,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/redgateman/IGI/Lab_2/task1/code/tests/test_calculations.py",
+    "last_opened_file_path": "/home/redgateman/ABC/LABS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,7 +41,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.Python tests in test_calculations.py">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lab_2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,10 +134,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python tests.Python tests for test_calculations.test_is_input_valid_4" />
         <item itemvalue="Python tests.Python tests for test_calculations.test_get_amount_of_sentences1" />
         <item itemvalue="Python tests.Python tests for test_calculations.test_get_amount_of_sentences0" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -173,6 +154,9 @@
       <workItem from="1684244499041" duration="4398000" />
       <workItem from="1684260214594" duration="3806000" />
       <workItem from="1684865509350" duration="8578000" />
+      <workItem from="1685011282583" duration="112000" />
+      <workItem from="1685008358413" duration="2558000" />
+      <workItem from="1685015235102" duration="29000" />
     </task>
     <servers />
   </component>
@@ -191,9 +175,9 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Lab_2$.coverage" NAME=" Coverage Results" MODIFIED="1684870249830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Lab_2$.coverage" NAME=" Coverage Results" MODIFIED="1685008777116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Lab_2$helper_functions.coverage" NAME="helper_functions Coverage Results" MODIFIED="1684869346239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task1/code" />
-    <SUITE FILE_PATH="coverage/Lab_2$main.coverage" NAME="main Coverage Results" MODIFIED="1684868229735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task2/src" />
+    <SUITE FILE_PATH="coverage/Lab_2$main.coverage" NAME="main Coverage Results" MODIFIED="1685008786348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task1/code" />
     <SUITE FILE_PATH="coverage/Lab_2$constants.coverage" NAME="constants Coverage Results" MODIFIED="1684247969002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
