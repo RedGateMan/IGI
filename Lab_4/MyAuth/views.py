@@ -5,6 +5,7 @@ from django.views.generic import CreateView
 
 from MyAuth.forms import RegistrationForm, LoginForm
 from MyAuth.models import User
+from MyAuth.utils import construct_errors_msg
 
 
 # Create your views here.
@@ -33,17 +34,6 @@ class RegistrationView(CreateView):
 			context['registration_form'] = form
 			context['errors'] = construct_errors_msg(form.errors)
 			return render(request, 'MyAuth/register.html', context)
-
-
-def construct_errors_msg(errors: dict):
-	if errors is None:
-		return None
-
-	result = []
-	for k, v in errors.items():
-		result.append(f'{k}: {v.pop()}')
-
-	return result
 
 
 class LogoutView(View):
