@@ -22,5 +22,9 @@ from Lab_4.views import HomeView
 urlpatterns = [
 	path('admin/', admin.site.urls),
 	path('auth/', include('MyAuth.urls')),
+	path('polls/', include('polls.urls'), name='polls'),
 	path('', HomeView.as_view(), name='home'),
 ]
+
+handler404 = "Lab_4.views.custom_page_not_found_view"
+handler500 = "Lab_4.views.custom_500_view"

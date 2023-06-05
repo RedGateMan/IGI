@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://unpkg.com/imask"></script>
     <title>Lab_4</title>
     <style>
         a {
@@ -27,7 +28,11 @@
             --sand-color: rgb(216, 180, 160);
         }
 
-        header {
+        h1 {
+            margin: 0;
+        }
+
+        .base__header {
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
@@ -54,6 +59,12 @@
             justify-content: center;
             align-items: center;
             margin: auto;
+        }
+
+        .home-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1fr;
+            gap: 15px;
         }
 
         ul {
@@ -101,7 +112,11 @@
             max-width: 300px;
         }
 
-        .form-button {
+        .form-button, .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             height: 60px;
             border-radius: 15px;
             background-color: white;
@@ -112,12 +127,12 @@
             transition: background-color 300ms ease-out;
         }
 
-        .form-button:hover {
+        .form-button:hover, .button:hover {
             background-color: var(--accent-color);
             color: white;
         }
 
-        .form-button:focus-within {
+        .form-button:focus-within, .button:focus-within {
             -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.34);
             -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.34);
             box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.34);
@@ -133,10 +148,62 @@
             margin: 0;
         }
 
+        .office-detail__h1 {
+            margin-bottom: 30px;
+        }
+
+        .detail__content {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            gap: 15px;
+
+            border: 3px solid black;
+            border-radius: 15px;
+        }
+
+        .list {
+            overflow-y: auto;
+
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .list-item {
+            padding: 15px;
+
+            border: 3px solid black;
+            border-radius: 15px;
+        }
+
+        .list-item > footer {
+            color: dimgray;
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+            min-width: 300px;
+        }
+
+        .list-item__meta {
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        .agent-item__button {
+            width: 150px;
+        }
     </style>
 </head>
 <body>
-<header>
+<header class="base__header">
     <nav>
         {% if user.is_authenticated %}
             <a href="/auth/logout">Logout</a>

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="home-content">
+        {% include 'office_list.html' %}
+        {% include 'agent_list.html' %}
+        {% include 'insurance_list.html' %}
+        {{ joke }}
+    </div>
+{% endblock %}

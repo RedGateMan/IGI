@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            IMask(document.getElementsByTagName('input').namedItem('phone'), {
+                mask: '+ {375} (00) 000-00-00'
+            });
+        })
+    </script>
+    <ul>
+        {% for contract in contracts %}
+            {% for item in contract %}
+                <li>
+                {% if user.is_staff %}
+                    <a href="{% url 'contract' contract_id=item.pk  %}">{{ item.agent }} - {{ item.status }}</a>
+                    {{ item.agent.get_salary }}
+                {% else %}
+                    {{ item.agent }} - {{ item.status }}
+                {% endif %}
+                </li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+    <form method="post" action="{% url 'update_profile' %}">
+        {{ form.as_p }}
+        <input class="login-form__submit form-button" type="submit" value="Save"/>
+        {% csrf_token %}
+    </form>
+    <div class="form-errors">
+        {% for error in errors %}
+            <p style="color: var(--accent-color)">{{ error }}</p>
+        {% endfor %}
+    </div>
+    <div>
+        {% if success %}
+            AAA
+    {% endif %}
+    </div>
+{% endblock content %}

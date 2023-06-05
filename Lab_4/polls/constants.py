@@ -10,3 +10,12 @@ OBJECT_TYPE = [
 	("BUILDING", "Building"),
 	("PERSON", "Person"),
 ]
+
+STATUS = [
+	("PENDING", "Pending"),
+	("ACTIVE", "Active"),
+	("OUTDATED", "Outdated"),
+	("DECLINED",  "Declined")
+]
+
+SALARY = 0.3

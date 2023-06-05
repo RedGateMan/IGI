@@ -1,6 +1,6 @@
 from django.db import models
 
-from polls.constants import INSURANCE_TYPE, OBJECT_TYPE
+from polls.constants import INSURANCE_TYPE, OBJECT_TYPE, STATUS, SALARY
 from MyAuth.models import User
 
 
@@ -11,6 +11,9 @@ class Office(models.Model):
 	name = models.CharField(max_length=30)
 	address = models.CharField(max_length=50)
 	phone = models.CharField(max_length=13)
+
+	def __str__(self):
+		return f'[#{self.id}] {self.name}'
 
 
 class Insurance(models.Model):
@@ -23,6 +26,9 @@ class Insurance(models.Model):
 	duration = models.DurationField()
 	percentage = models.FloatField()
 
+	def __str__(self):
+		return f'[#{self.id}] Type: {self.insurance_type}, Duration: {self.duration}'
+
 
 class Object(models.Model):
 	object_type = models.CharField(
@@ -30,6 +36,9 @@ class Object(models.Model):
 		choices=OBJECT_TYPE
 	)
 	description = models.TextField()
+
+	def __str__(self):
+		return f'[#{self.id}] Type: {self.object_type}'
 
 
 class Agent(models.Model):
@@ -46,28 +55,56 @@ class Agent(models.Model):
 
 	)
 
+	def get_salary(self):
+		contracts = Contract.objects.filter(agent_id=self.id, status='ACTIVE')
+		salary = 0
+		for contract in contracts:
+			salary += float(contract.cost) * contract.insurance.percentage
+		return salary * SALARY
+
 	def __str__(self):
-		return f'[#{self.id}] {self.user.name + " " + self.user.surname}'
+		return f'[#{self.id}] {self.user.name + " " + self.user.surname}, Office: {self.office.name}'
 
 
 class Contract(models.Model):
+	status = models.CharField(
+		max_length=15,
+		default="PENDING",
+		null=True,
+		blank=True,
+		choices=STATUS,
+	)
 	client = models.ForeignKey(
 		to=User,
+		null=True,
+		blank=True,
 		on_delete=models.CASCADE,
 	)
 	agent = models.ForeignKey(
 		to=Agent,
 		null=True,
+		blank=True,
 		on_delete=models.SET_NULL,
 	)
 	insurance = models.ForeignKey(
 		to=Insurance,
 		null=True,
+		blank=True,
 		on_delete=models.SET_NULL,
 	)
 	object = models.OneToOneField(
 		to=Object,
+		null=True,
+		blank=True,
 		on_delete=models.CASCADE,
 	)
-	sign_date = models.DateTimeField(auto_now=True)
-	cost = models.CharField(max_length=60)
+	sign_date = models.DateTimeField(auto_now_add=True)
+	cost = models.CharField(
+		null=True,
+		blank=True,
+		max_length=60
+	)
+
+	def __str__(self):
+		return f'[#{self.id}] Client: {self.client.surname}, Agent: {self.agent.user.surname}, ' \
+			   f'Object: {self.object.object_type} -- {self.object.description}'
