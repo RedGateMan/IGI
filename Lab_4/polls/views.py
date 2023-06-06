@@ -111,6 +111,8 @@ class ContractView(View):
 		if action is not 'DECLINED':
 			contract = Contract.objects.get(id=kwargs['contract_id'])
 			contract.status = action
+			contract.insurance_id = request.POST['insurance']
+			contract.cost = request.POST['cost']
 			contract.save()
 			return redirect('profile')
 		else:

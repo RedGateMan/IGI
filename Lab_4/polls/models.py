@@ -59,7 +59,10 @@ class Agent(models.Model):
 		contracts = Contract.objects.filter(agent_id=self.id, status='ACTIVE')
 		salary = 0
 		for contract in contracts:
-			salary += float(contract.cost) * contract.insurance.percentage
+			if contract.cost is not None:
+				salary += float(contract.cost) * contract.insurance.percentage
+			else:
+				return 0
 		return salary * SALARY
 
 	def __str__(self):
