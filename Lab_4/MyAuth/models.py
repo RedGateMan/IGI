@@ -47,7 +47,7 @@ class User(AbstractBaseUser):
 	patronymic = models.CharField(max_length=20)
 	username = models.CharField(max_length=30, unique=True)
 	email = models.EmailField(verbose_name='email', unique=True)
-	phone = models.CharField(max_length=13)
+	phone = models.CharField(max_length=20)
 	date_joined = models.DateTimeField(verbose_name='date joined', auto_now_add=True)
 	last_login = models.DateTimeField(verbose_name='last login', auto_now=True)
 	is_admin = models.BooleanField(default=False)

@@ -2,10 +2,17 @@
 {% load static %}
 
 {% block content %}
-    <div class="home-content">
-        {% include 'office_list.html' %}
-        {% include 'agent_list.html' %}
-        {% include 'insurance_list.html' %}
-        {{ joke }}
+    <div class="home-section">
+        <section class="joke-wrapper section">
+            <header>
+                <h1>Here isa joke I've retrieved from API...</h1>
+            </header>
+            {{ joke }}
+        </section>
+        <div class="home-content">
+            {% include 'office_list.html' %}
+            {% include 'agent_list.html' %}
+            {% include 'insurance_list.html' %}
+        </div>
     </div>
 {% endblock %}

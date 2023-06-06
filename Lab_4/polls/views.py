@@ -136,6 +136,7 @@ class ProfileView(View):
 		user = request.user
 		context = {}
 		user_id = user.id
+		salary = None
 		if not user.is_staff:
 			pending_contracts = ContractListView().get_queryset(client_id=user_id, status='PENDING')
 			active_contracts = ContractListView().get_queryset(client_id=user_id, status="ACTIVE")
@@ -145,7 +146,11 @@ class ProfileView(View):
 			pending_contracts = ContractListView().get_queryset(agent_id=agent.id, status='PENDING')
 			active_contracts = ContractListView().get_queryset(agent_id=agent.id, status="ACTIVE")
 			declined_contracts = ContractListView().get_queryset(agent_id=agent.id, status="DECLINED")
-		context['contracts'] = [pending_contracts, active_contracts, declined_contracts]
+			salary = agent.get_salary()
+		context['pending_contracts'] = pending_contracts
+		context['active_contracts'] = active_contracts
+		context['declined_contracts'] = declined_contracts
+		context['salary'] = salary
 		context['form'] = ProfileForm(
 			initial={'name': user.name, 'surname': user.surname, 'patronymic': user.patronymic, 'phone': user.phone, }
 		)
